@@ -11,7 +11,7 @@ function setDigit(number, text) {
 function updateClock() {
 	const date = new Date();
 
-	const [, time] = date.toLocaleString();
+	const [, time] = date.toLocaleString().split(" ");
 	const [hour, minute, second] = time.split(":");
 
 	setDigit(1, hour.charAt(0));
